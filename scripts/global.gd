@@ -2,11 +2,11 @@ extends Node2D
 
 var frames = []
 
-var current_day = null
+var current_day = "mon"
 var money = 0
 var overtime = 0
-var happiness = 50
-var wife_happiness = 50
+var happiness = 20
+var wife_happiness = 20
 
 var overtime_value = 100
 
@@ -36,3 +36,11 @@ func animated_scene(structure):
 
     # begin executing the chain by calling the first item's method
     current["target"].callv(current["method"], current["args"])
+
+
+func add_overtime(additional_ot):
+	overtime += additional_ot
+	money += (overtime_value * additional_ot)
+
+	happiness -= int(additional_ot / 2)
+	wife_happiness -= additional_ot
