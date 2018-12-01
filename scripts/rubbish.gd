@@ -44,7 +44,7 @@ func _on_SpawnTimer_timeout():
 		randomize()
 		var rand_y = rand_range(50, 550)
 
-		var new_rubbish_choice = RUBBISH_SCENES[rand_range(0, len(RUBBISH_SCENES))]
+		var new_rubbish_choice = RUBBISH_SCENES[(randi() % len(RUBBISH_SCENES))]
 		var new_rubbish_scene_path = "res://scenes/rubbish/" + new_rubbish_choice
 
 		var new_rubbish = load(new_rubbish_scene_path).instance()
