@@ -4,6 +4,8 @@ onready var DIALOGUE = $CanvasLayer/DialogueBox
 onready var NEXT_SCENE = preload("res://scenes/WorkAmount.tscn")
 
 func _ready():
+	my_global_script.current_day = "mon"
+
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Hey, how's it going?"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Boy, what a week I've had."]},
@@ -25,6 +27,4 @@ func _ready():
 
 
 func go_to_amount_scene():
-	my_global_script.current_day = "mon"
-
 	get_tree().change_scene_to(NEXT_SCENE)

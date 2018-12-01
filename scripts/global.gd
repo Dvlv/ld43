@@ -10,6 +10,8 @@ var wife_happiness = 20
 
 var overtime_value = 100
 
+var recent_overtime = 0
+var wife_recent_ot = 0
 
 func tie_together_frames():
     frames.remove(0)
@@ -39,6 +41,7 @@ func animated_scene(structure):
 
 
 func add_overtime(additional_ot):
+	recent_overtime = additional_ot
 	overtime += additional_ot
 	money += (overtime_value * additional_ot)
 

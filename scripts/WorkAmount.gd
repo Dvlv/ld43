@@ -50,6 +50,7 @@ func update_time_and_money():
 
 func on_submit():
 	my_global_script.add_overtime((w_overtime + overtime))
+	my_global_script.wife_recent_ot = w_overtime
 
 	var next_scene = null
 	if my_global_script.current_day == "mon":
