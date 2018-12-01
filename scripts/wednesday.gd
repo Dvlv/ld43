@@ -20,7 +20,7 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"I need to start getting ready for work.\" I said. \"We'll talk about this tonight\"."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["On the way into work, it hit me like a ton of bricks. "]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["My wife can't work while pregnant. The fumes produced by those machines can wreak havoc on the baby."]},
-		# minigame
+		# minigame - drive emotionally
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"WAIT!\" I screamed. There was a temp space open at work. \"I'm sure the boss is pleased enough at my dedication this week to give her the job until the baby comes.\"."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"If I didn't screw up the bid for our huge client, I'm sure he'll be thrilled to help me out.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["..."]},
@@ -42,7 +42,7 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Still, I knew she didn't really have room to complain. Work is work, money is money."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["She dropped the little one over with her parents and came in at lunch."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["It was nice seeing her, felt like the most I'd seen her all week. Probably was."]},
-		# minigame
+		# minigame - sort papers
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["That evening, the boss came over to check on us. Security needed to know when the two of us would be leaving."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I knew the drill by now."]},
 		{"target": self, "method": "go_to_amount_scene", "args": []},

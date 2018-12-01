@@ -23,6 +23,7 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I nodded"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Pitch is tomorrow. Knock em out, champ!\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Sounded like the boss really needed me. And I figured everyone at home was fine with me staying late again."]},
+		# mini game - find the right page
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["That evening, I said goodbye to my last coworker, before catching up with the boss to fill in my overtime."]},
 		{"target": self, "method": "go_to_amount_scene", "args": []},
 	])

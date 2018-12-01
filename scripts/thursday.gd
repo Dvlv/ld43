@@ -20,7 +20,7 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"I know it's your work and all but, you know what these corporate people are like\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Don't sweat it\" I replied \"You're totally the only person I'd trust to deliver this bid exactly how it needs to go.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Go get 'em boss!\" I gave him a reassuring pat on the back, then returned to my work."]},
-		# minigame
+		# minigame - memory
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["That evening, the boss left with the clients for what I assume was a boozy night on the town, so I checked in with security myself."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["They weren't supposed to deal non-management directly, but since we'd been doing it all week he let this occasion slide."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He sure kept a close eye on me that night, though."]},
@@ -54,8 +54,6 @@ func why_people_missing_two():
 		return "I'd like to think the boss paid them in full, anyway. Though with the financial concerns, I'm not so sure..."
 	else:
 		return "The boss had mentioned financial troubles, but it had never become a reality until then.."
-
-
 
 
 func go_to_amount_scene():
