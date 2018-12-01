@@ -1,0 +1,394 @@
+ld43:
+
+sacrifices must be made
+
+
+
+
+
+Hey. How's it going? 
+
+Boy, what a week I've had.
+
+I woke up Monday morning as normal and found some mail which had been left unnoticed on the ground.
+
+Obviously it was great news! ... Not!
+
+My mortgage is overdue. They want a payment of $2000 by the end of the week or they're gonna send some people around to reclaim my posessions. 
+
+I know I may look like a million dollars, but I just don't have that kinda money laying around, y'know?
+
+I head in, I speak to the boss. His face lights up like a christmas tree.
+
+"Sure, I got tons of extra work for you. Do as much overtime as you can, I could really use the help."
+
+"Things around here aren't lookin' so hot either" he told me. "Those two HUGE clients we got in last year ain't happy with our quality of service."
+
+"Satisfy them and I'll pay ya mortgage myself, pal".
+
+Sounds like problem sorted, eh. I just pull some all nighters and we're over the hump.
+
+Thing is, with a newborn baby at home, and potentially one more on the way, I can't leave my wife home alone all week. She needs me there.
+
+Still, I can't make her homeless either! She gave up a lot to be with me. If we lose our house, I'll just prove her parents right.
+
+So, monday evening rolls around, and people start going home. 
+
+Boss comes over and asks me to decide how long I'm gonna stay, so he can let security know there's gonna be someone around.
+
+By law I need to sleep for at least 2 hours a night, so my boss don't lose his job for violating our health insurance.
+
+
+
+<<choose>>
+
+
+
+
+
+
+I decided to carry on for X hours. Earned myself a <<adjective>> <<amount>> dollars.
+
+
+<<whether or not saw wife>>
+
+Tuesday came about next, of course. 
+
+Mostly a normal day all morning. <<whether was tired>>
+
+Boss came to me at lunch looking all serious.
+
+Said "Hey, you know those guys we were talking to last week? That life-changing contract? Well, it's back on!" 
+
+"That's great!" I said
+
+"Back on, as in, we get another chance to bid. We haven't won it yet."
+
+"Ah, that makes sense..." I replied
+
+"Yeah, well, you still after overtime? Get us that contract and I'll buy ya a house myself!"
+
+"If we lose 'em... uh, well, it ain't lookin' all sunshine, kid. Feel me?"
+
+...
+
+"Pitch is tomorrow. Knock em out, champ!"
+
+Sounds like we really need them. Maybe I should put in a few more hours tonight. I'm sure everyone at home is fine without me.
+
+That evening, I said goodbye to my last coworker, before catching up with the boss to fill in my overtime.
+
+
+<choose>>
+
+Wednesday morning I woke up to my wife in kahoots. 
+
+Asked her what was going on, fingers crossed it was some good news.
+
+"It's happening. Again"
+
+"Another one?" I asked
+
+"Yes. We're having another baby"
+
+We both looked at each other for a minute, not sure whether to jump for joy or cry for help. 
+
+Can we afford to give a second child the life it truly deserves?
+
+*beep-beep*, *beep-beep*, *beep-beep*
+
+Oh, my alarm clock. 
+
+"I need to start getting ready for work." I said. "We'll talk about this tonight".
+
+On the way into work, it hit me like a ton of bricks. 
+
+My wife can't work while pregnant. The fumes produced by those machines can wreak havoc on the baby.
+
+...
+
+...
+
+WAIT! There's a temp space open at work. I'm sure the boss is pleased enough at my dedication this week to give her the job until the baby comes.
+
+If I didn't screw up the bid for our huge client, I'm sure he'll be thrilled to help me out.
+
+...
+
+I hope.
+
+
+
+I immediately went straight to the boss' office to make sure he'd had a chance to look over my bid.
+
+He had a huge smile on his face.
+
+"You, sir, are a rockstar! This is brilliant! There's no way they'll turn this down."
+
+"This is it, we've gottem. We've gottem for sure!"
+
+"c'mere ya big genuis!"
+
+Well, that was... the best reaction I could have hoped for!
+
+I cleared my throat nervously. "Glad you like it boss. Hey uh, listen..."
+
+"My wife just realised she's pregnant again. She can't work at the factory anymore, because of the fumes. You put that..."
+
+"The temp job? Consider it hers!" 
+
+"Ah boss, you're a life-saver!" I smiled, and let out a huge sigh of relief.
+
+"She can help you with yer overtime, if ya want. I know you ain't in a good place for raisin' a second child, the money could really help."
+
+I was so thrilled I could've pounced on my boss and given him a huge hug.
+
+I didn't though.
+
+I just nodded and left the room to phone my wife.
+
+She doesn't love the work we do here. Finds it boring. 
+
+Still, I knew she didn't really have room to complain. Work is work, money is money.
+
+She dropped the little one over at her mother's and came in for the afternoon shift.
+
+It was nice seeing her, Felt like the most I'd seen her all week. Probably was.
+
+
+That evening, the boss came over to check on us. Security need to know when the two of us would be leaving.
+
+I knew the drill by now.
+
+<<choices>>
+
+
+<< time-based bit about wife >>
+That night my wife slept in the baby's room. I think she felt guilty about the overtime. 
+
+I promised myself that when this debt is paid I'd spend a whole week with the two of them.
+
+Just needed to get out of this mess. 
+
+
+When I got to work on Thursday I noticed a few people were missing. 
+
+<<if worked more than a certain amount of time>>
+Apparently they were contractors, and I'd completed their work for them on my overtime. 
+
+I'd like to think they got paid in full anyway, but with the way the boss has been talking, I can't be sure.
+
+<<else>>
+Apparently the company really isn't doing great. 
+
+I'd heard the boss talking about it, but it never quite became reality until then.
+
+
+I caught up with the boss that afternoon. He looked nervous.
+
+"Gotta give your bid today son, but uh, listen"
+
+"Because of, y'know, last time... they just want me there."
+
+"I know it's your work and all but, you know what these corporate people are like"
+
+"Don't sweat it" I replied "You're totally the only person I'd trust to deliver this bid exactly how it needs to go"
+
+"Go get 'em boss!" I gave him a reassuring pat on the back.
+
+
+The boss left with the clients for what I assume was a boozy night on the town, so I checked in with security myself.
+
+They weren't supposed to deal with us directly, but since we'd been doing it all week he let this occasion slide.
+
+He sure kept a close eye on me that night, though.
+
+
+
+<<choose>>
+
+
+<<if wife worked late>>
+I awoke Friday to the sound of my wife being sick.
+
+Poor thing just found out she's pregnant and she's already being worked like a dog.
+
+If the boss pays out, I'm gonna treat her real good this weekend.
+
+She slept in the kid's room again. 
+
+Am I a bad person for not feeling as guilty as she does?
+
+I'm doing this for the both of them. No, the three of them now.
+
+<<money check>>
+
+The whole office block is closed on weekends, and I can't work from home either.
+
+This was my last chance to grab enough money to get us out of trouble for another month. 
+
+I'd need to swing by the other office and cash in my hours before I got home. If I forgot, the whole week was for nothing.
+
+To get there I'd need to leave by 9, so only 4 hours of overtime I could take.
+
+<<money related phrase>> I thought I'd make it okay / I knew I couldn't make it / I could just about scrape it together.
+
+Thw wife went to hospital that day, so the rest of the money making was up to me.
+
+
+
+
+At 11am the boss dragged himself in. He looked a wreck.
+
+"Good night out?" I asked.
+
+<< if too much overtime >>
+
+He called me into his office and shut the door. 
+
+Uh oh.
+
+He threw the bid in front of me and told me to give it a read over.
+
+"But I wrote it?" I asked puzzled.
+
+"Shut your eyes for twenty seconds, then open 'em an' read it properly!" 
+
+I did as instructed.
+
+My face must've dropped like a lead balloon.
+
+There were spelling errors everywhere. Some of the sentences made no sense, and there was a big coffee ring on the second page. 
+
+"But..." I began.
+
+"No. Just, don't. You've been working too hard, kid. Don'tcha know how important sleep is for quality of work?"
+
+"But I..." I said in desparation
+
+"No, kid. I know. I know."
+
+"Truth is, I've not been myself ever since we lost those other two. I've been drinkin' hard at night."
+
+"I didn't even read this before I began. I just saw how much you been workin' and put total confidence in ya."
+
+"I looked like such a fool in that room, kid. They thought we was morons. Again."
+
+"Most I could do was buy 'em a few drinks to apologise and try some sweet talkin'."
+
+"They wasn't gonna turn down the drinks, but I knew the whole time they'd given up on us."
+
+"Is..." I tried.
+
+"Yeah, kid. That's it. End o' the month corporate'll be down here to close us. They've seen us as nothing but an expense for who-knows-how-long".
+
+"Just... just go home kid. I can't... I just can't stand to... just..."
+
+I knew what he wanted to say. I gave him a nod and walked out.
+
+I'd done this to him. I'd done this to us all.
+
+My desire to grab money like there's no tomorrow has put 25 people out of work. 
+
+*back to present day*
+
+But you know what?
+
+Corporate did close the branch. But they took one look at my timecard and decided I was too valuable an employee to lose.
+
+They spoke to my boss, who couldn't bring himself to say a bad word about me, knowing the situation.
+
+So now I'm a boss. Of course, we had to move. But given the pay increase, and the new child, that was a given.
+
+I left my few friends behind. I mean, I'm sure they understand that family comes first. 
+
+Thought I'd make some new ones at work.
+
+Thing is.
+
+Rumours. They spread like wildfire. My people know what happened back there.
+
+I started the job thinking I could be as great a boss as my old one. Maybe I could take someone under my wing, call them "kid".
+
+Raise them to my level of success one day, like he did for me.
+
+But nah. They all hate me. They think I'm gonna run their branch into the ground, too.
+
+I'm starting to believe they might be right.
+
+Ungrateful brats.
+
+So, yeah. I make a lotta money, live in a huge house, and have two wonderful children I get to see every weekend.
+
+Divorced life is just leaving me a bit lonely. So I'm looking for a friend. 
+
+Maybe more.
+
+I guess that's me. 
+
+Tell me about you.
+
+*realises he's on a date*.
+
+
+
+
+
+<< If not enough overtime >>
+
+He called me into his office and shut the door
+
+Uh oh.
+
+"They... they didn't buy it. Just wasn't enough."
+
+"Enough?" I questioned.
+
+"Not enough thought. Not enough care. Not enough room for negotiation."
+
+"We had more to offer 'em. An' they know we did. But they wouldn' take my word for it. They wanted it on paper."
+
+"An' it wasn't on the paper."
+
+"There was just... not enough on the papers."
+
+I knew it.
+
+I was toast.
+
+"I've been tellin' ya about how we're doin'... y'know... financially."
+
+"Corporate said next person to screw up is a gonner."
+
+"I just... I know about yer kids an' all, but..."
+
+This was it. The gun was loaded. 
+
+Well, I was the gun. Or maybe the bullet.
+
+Either way. I was fired.
+
+"Kid..."
+
+I choked back my tears. I knew he didn't want to say it. And I didn't want to hear it.
+
+I got up, looked him in the eye, and walked out.
+
+My desk was aready being packed up by security.
+
+I gave them all business property and walked with them to the front door, turning over my ID card.
+
+*back to present day*
+
+I haven't been home since. I know my wife has realised. There's no way she hasn't.
+
+I just can't face her. Her and the child. The children. 
+
+Bayliffs are coming tomorrow. I'll go back and protect her from them. 
+
+I will.
+
+I must.
+
+*realises he's sitting on the streets.*
+
