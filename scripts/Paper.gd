@@ -1,15 +1,23 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+
+export(String) var type = ""
+
+export(int) var speed = 5
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	if type == "finance":
+		$Sprite.texture = load("res://assets/papersort/financePaper.png")
+	elif type == "hr":
+		$Sprite.texture = load("res://assets/papersort/hrPaper.png")
+	else:
+		$Sprite.texture = load("res://assets/papersort/salesPaper.png")
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+
+func _physics_process(delta):
+	position.x = position.x + speed
+
+
+func file():
+	# play noise
+	queue_free()

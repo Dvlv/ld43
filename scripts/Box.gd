@@ -1,15 +1,19 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+signal caught_paper
+
+export(String) var type = ""
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	if type == "finance":
+		$Sprite.texture = load("res://assets/papersort/financePaper.png")
+	elif type == "hr":
+		$Sprite.texture = load("res://assets/papersort/hrPaper.png")
+	else:
+		$Sprite.texture = load("res://assets/papersort/salesPaper.png")
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+
+func _on_Area2D_area_entered(area):
+	if area.name == "PaperArea":
+		emit_signal("caught_paper", self.type, area.get_parent().type)
+		area.get_parent().file()

@@ -1,17 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Paper.gd" type="Script" id=1]
+[ext_resource path="res://assets/papersort/financePaper.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 98.2913, 99.7804 )
 
-[node name="Paper" type="Node2D" index="0"]
+[node name="Paper" type="Node2D"]
 
 script = ExtResource( 1 )
+type = ""
+speed = 5
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
 
 [node name="PaperArea" type="Area2D" parent="." index="1"]
 
@@ -26,5 +31,6 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PaperArea" index="0"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 
