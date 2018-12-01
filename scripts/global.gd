@@ -1,4 +1,14 @@
+extends Node2D
+
 var frames = []
+
+var current_day = null
+var money = 0
+var overtime = 0
+var happiness = 50
+var wife_happiness = 50
+
+var overtime_value = 100
 
 
 func tie_together_frames():

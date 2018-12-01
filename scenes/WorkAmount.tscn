@@ -1,6 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="Control" type="Control" index="0"]
+[ext_resource path="res://scripts/WorkAmount.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="WorkAmount" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -12,6 +15,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
 
@@ -19,6 +23,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -49.0
+margin_bottom = -4.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -27,14 +33,53 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="Player" type="HBoxContainer" parent="VBoxContainer" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1024.0
-margin_bottom = 197.0
+margin_right = 975.0
+margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 75.0
+margin_right = 975.0
+margin_bottom = 89.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Drag the slider to adjust your overtime. The longer you work, the more money you earn!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Player" type="HBoxContainer" parent="VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 168.0
+margin_right = 975.0
+margin_bottom = 332.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -50,8 +95,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 510.0
-margin_bottom = 197.0
+margin_right = 483.0
+margin_bottom = 164.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -61,33 +106,117 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer2" type="CenterContainer" parent="VBoxContainer/Player" index="1"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Player/MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 514.0
-margin_right = 1024.0
-margin_bottom = 197.0
+margin_left = 209.0
+margin_top = 50.0
+margin_right = 273.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Player" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 487.0
+margin_right = 975.0
+margin_bottom = 164.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
+size_flags_horizontal = 11
+size_flags_vertical = 11
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
 
-[node name="Girlfriend" type="HBoxContainer" parent="VBoxContainer" index="1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Player/MarginContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 201.0
-margin_right = 1024.0
-margin_bottom = 398.0
+margin_left = 8.0
+margin_right = 488.0
+margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Player/MarginContainer2/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 480.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = 1.0
+max_value = 6.0
+step = 1.0
+page = 0.0
+value = 1.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 6
+ticks_on_borders = true
+focus_mode = 2
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags" ]
+
+[node name="Label" type="Label" parent="VBoxContainer/Player/MarginContainer2/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 480.0
+margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1                                                                                                                    6"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Wife" type="HBoxContainer" parent="VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 336.0
+margin_right = 975.0
+margin_bottom = 500.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -97,14 +226,14 @@ size_flags_vertical = 3
 alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer" type="CenterContainer" parent="VBoxContainer/Girlfriend" index="0"]
+[node name="MarginContainer" type="CenterContainer" parent="VBoxContainer/Wife" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 510.0
-margin_bottom = 197.0
+margin_right = 479.0
+margin_bottom = 164.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -114,75 +243,226 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer2" type="CenterContainer" parent="VBoxContainer/Girlfriend" index="1"]
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Wife" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 514.0
-margin_right = 1024.0
-margin_bottom = 197.0
+margin_left = 483.0
+margin_right = 975.0
+margin_bottom = 164.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
+size_flags_horizontal = 11
+size_flags_vertical = 11
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
 
-[node name="Brother" type="HBoxContainer" parent="VBoxContainer" index="2"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Wife/MarginContainer3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 402.0
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_left = 8.0
+margin_right = 492.0
+margin_bottom = 164.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 1
+size_flags_vertical = 1
 alignment = 0
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer" type="CenterContainer" parent="VBoxContainer/Brother" index="0"]
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Wife/MarginContainer3/VBoxContainer2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 510.0
-margin_bottom = 198.0
+margin_right = 484.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+min_value = 0.0
+max_value = 3.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 3
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags" ]
+
+[node name="Label" type="Label" parent="VBoxContainer/Wife/MarginContainer3/VBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 484.0
+margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0                                                                                                                     3"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 504.0
+margin_right = 975.0
+margin_bottom = 596.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="MarginContainer2" type="CenterContainer" parent="VBoxContainer/Brother" index="1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 514.0
-margin_right = 1024.0
-margin_bottom = 198.0
+margin_left = 426.0
+margin_right = 548.0
+margin_bottom = 92.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Overtime" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 122.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Overtime: 1 hour"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Money" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 122.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Money: $100"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="blank" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 36.0
+margin_right = 122.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="VBoxContainer/CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 54.0
+margin_right = 122.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-use_top_left = false
-_sections_unfolded = [ "Size Flags" ]
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Submit Overtime"
+flat = false
+align = 1
+
+[node name="blank2" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 78.0
+margin_right = 122.0
+margin_bottom = 92.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 

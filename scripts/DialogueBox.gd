@@ -3,9 +3,8 @@ extends Control
 signal finished_displaying
 
 onready var TIMER = $Timer
-onready var NAME = $VBoxContainer/MarginContainer/NinePatchRect/Name
-onready var TEXT = $VBoxContainer/MarginContainer/NinePatchRect/Text
-onready var NEXT = $VBoxContainer/MarginContainer/NinePatchRect/Next
+onready var TEXT = $VBoxContainer/MarginContainer3/NinePatchRect/Text
+onready var NEXT = $VBoxContainer/MarginContainer3/NinePatchRect/Next
 
 var listening = false
 
@@ -21,21 +20,17 @@ func _process(delta):
             listening = false
             emit_signal("finished_displaying")
 
-func set_name(name):
-    NAME.text = name
-
 func set_text(text):
     TEXT.text = text
 
 func display_text():
     TIMER.start()
 
-func show_dialogue(name, text):
+func show_dialogue(text):
     self.visible = true
     listening = false
     NEXT.visible = false
 
-    set_name(name)
     set_text(text)
     display_text()
 
