@@ -3,7 +3,6 @@ extends Node2D
 signal fail
 signal freeze
 
-onready var MYCAR = $Car
 onready var TIMELEFT = $CanvasLayer/Label
 onready var ENEMY_CAR_SCENE = preload("res://scenes/drive/EnemyCar.tscn")
 
@@ -13,12 +12,17 @@ var time_left = 30
 
 
 func _ready():
-	MYCAR.connect("crash", self, "on_crash")
-
+	$Car.connect("crash", self, "on_crash")
 	$Car.visible = false
 
 
 func start():
+	has_failed = false
+	time_left = 30
+	TIMELEFT.text = "Time: 30"
+	$Car.visible = true
+	$SpawnTimer.wait_time = 2
+
 	$GameTimer.start()
 	$SpawnTimer.start()
 	_on_SpawnTimer_timeout()
@@ -28,6 +32,12 @@ func start():
 func on_crash():
 	emit_signal("fail")
 	has_failed = true
+	$Instructions.visible = true
+	$Car.visible = false
+
+	for child in $EnemyCars.get_children():
+		child.queue_free()
+
 
 
 func _on_GameTimer_timeout():
@@ -37,9 +47,9 @@ func _on_GameTimer_timeout():
 		TIMELEFT.text = "Time: " + str(time_left)
 
 		if time_left < 11:
-			$SpawnTimer.wait_time = 1.75
+			$SpawnTimer.wait_time = 1.5
 		elif time_left < 21:
-			$SpawnTimer.wait_time = 2
+			$SpawnTimer.wait_time = 1.75
 	else:
 		is_over = true
 
@@ -62,7 +72,7 @@ func _on_SpawnTimer_timeout():
 #				elif time_left < 20:
 #					new_enemy_car.speed = 4
 
-				add_child(new_enemy_car)
+				$EnemyCars.add_child(new_enemy_car)
 
 
 

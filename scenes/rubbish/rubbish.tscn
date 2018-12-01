@@ -42,7 +42,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Time: 20"
+text = "Time: 30"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -73,6 +73,7 @@ max_lines_visible = -1
 position = Vector2( 100, 50 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+is_disabled = false
 
 [node name="Sprite" type="Sprite" parent="Bag" index="0"]
 
@@ -242,6 +243,8 @@ group = null
 text = "Let's Go!"
 flat = false
 align = 1
+
+[node name="RubbishBits" type="Node2D" parent="." index="6"]
 
 [connection signal="area_entered" from="Bag/Area2D" to="Bag" method="_on_Area2D_area_entered"]
 

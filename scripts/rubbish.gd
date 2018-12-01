@@ -18,6 +18,10 @@ func _ready():
 func start():
 	$GameTimer.start()
 	$SpawnTimer.start()
+	$Bag.is_disabled = false
+	has_failed = false
+	MISSLABEL.text = "Missed: 0"
+	TIMELEFT.text = "Time: 30"
 
 
 func _on_FailArea_area_entered(area):
@@ -27,8 +31,18 @@ func _on_FailArea_area_entered(area):
 
 	if fail_count > 2:
 		emit_signal("fail")
-		has_failed = true
+		$SpawnTimer.stop()
+		$GameTimer.stop()
+		level_time = 30
+		fail_count = 0
 
+		has_failed = true
+		$Bag.is_disabled = true
+		$Bag.visible = false
+		for child in $RubbishBits.get_children():
+			child.queue_free()
+
+		$Instructions.visible = true
 
 
 func _on_GameTimer_timeout():
@@ -49,7 +63,7 @@ func _on_SpawnTimer_timeout():
 
 		var new_rubbish = load(new_rubbish_scene_path).instance()
 		new_rubbish.position = Vector2(1025, rand_y)
-		add_child(new_rubbish)
+		$RubbishBits.add_child(new_rubbish)
 
 
 func resume_friday():
