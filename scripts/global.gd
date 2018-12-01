@@ -13,6 +13,13 @@ var overtime_value = 100
 var recent_overtime = 0
 var wife_recent_ot = 0
 
+var tuesday_minigame_done = false
+var wednesday_minigame_done = false
+var wednesday_driving_done = false
+var thursday_minigame_done = false
+var friday_minigame_done = false
+
+
 func tie_together_frames():
     frames.remove(0)
 

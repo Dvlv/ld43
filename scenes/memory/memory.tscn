@@ -1,0 +1,714 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/memory.gd" type="Script" id=1]
+[ext_resource path="res://scenes/DialogueBox.tscn" type="PackedScene" id=2]
+
+[node name="Memory" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="DialogueBox" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+[node name="Yesno" type="Control" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 961.0
+margin_bottom = 534.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Yesno" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Yesno/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 470.0
+margin_top = 277.0
+margin_right = 554.0
+margin_bottom = 321.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="Button" type="Button" parent="Yesno/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 84.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Yes"
+flat = false
+align = 1
+
+[node name="Button2" type="Button" parent="Yesno/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Once more"
+flat = false
+align = 1
+
+[node name="Question1" type="Control" parent="." index="3"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 961.0
+margin_bottom = 534.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Question1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Question1/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 421.0
+margin_top = 256.0
+margin_right = 603.0
+margin_bottom = 342.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="Label" type="Label" parent="Question1/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 182.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Mike has gone to"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="Question1/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 182.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "The Arch Hotel in London"
+flat = false
+align = 1
+
+[node name="Button2" type="Button" parent="Question1/CenterContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 182.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "The Old Hotel in London"
+flat = false
+align = 1
+
+[node name="Button3" type="Button" parent="Question1/CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 66.0
+margin_right = 182.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "The Acme Hotel in London"
+flat = false
+align = 1
+
+[node name="Question2" type="Control" parent="." index="4"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 961.0
+margin_bottom = 534.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Question2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Question2/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 449.0
+margin_top = 256.0
+margin_right = 575.0
+margin_bottom = 342.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="Label" type="Label" parent="Question2/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 126.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "He is there to meet"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="Question2/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 126.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Morty Frosh"
+flat = false
+align = 1
+
+[node name="Button2" type="Button" parent="Question2/CenterContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 126.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Minty Fresh"
+flat = false
+align = 1
+
+[node name="Button3" type="Button" parent="Question2/CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 66.0
+margin_right = 126.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Mertle Thrash"
+flat = false
+align = 1
+
+[node name="Question3" type="Control" parent="." index="5"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 961.0
+margin_bottom = 534.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Question3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Question3/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 448.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 342.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="Label" type="Label" parent="Question3/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "This trip will cost us"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="Question3/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 128.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "$60"
+flat = false
+align = 1
+
+[node name="Button2" type="Button" parent="Question3/CenterContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 128.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "$15"
+flat = false
+align = 1
+
+[node name="Button3" type="Button" parent="Question3/CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 66.0
+margin_right = 128.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "$45"
+flat = false
+align = 1
+
+[node name="Question4" type="Control" parent="." index="6"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 961.0
+margin_bottom = 534.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="Question4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Question4/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 443.0
+margin_top = 256.0
+margin_right = 582.0
+margin_bottom = 342.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="Label" type="Label" parent="Question4/CenterContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 139.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "We could make"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="Question4/CenterContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 139.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "$4500 a year"
+flat = false
+align = 1
+
+[node name="Button2" type="Button" parent="Question4/CenterContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 139.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "$3500 a month"
+flat = false
+align = 1
+
+[node name="Button3" type="Button" parent="Question4/CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 66.0
+margin_right = 139.0
+margin_bottom = 86.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "$13500 per quarter "
+flat = false
+align = 1
+
+[connection signal="pressed" from="Yesno/CenterContainer/VBoxContainer/Button" to="." method="on_yes"]
+
+[connection signal="pressed" from="Yesno/CenterContainer/VBoxContainer/Button2" to="." method="on_no"]
+
+[connection signal="pressed" from="Question1/CenterContainer/VBoxContainer/Button" to="." method="on_correct"]
+
+[connection signal="pressed" from="Question1/CenterContainer/VBoxContainer/Button2" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question1/CenterContainer/VBoxContainer/Button3" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question2/CenterContainer/VBoxContainer/Button" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question2/CenterContainer/VBoxContainer/Button2" to="." method="on_correct"]
+
+[connection signal="pressed" from="Question2/CenterContainer/VBoxContainer/Button3" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question3/CenterContainer/VBoxContainer/Button" to="." method="on_correct"]
+
+[connection signal="pressed" from="Question3/CenterContainer/VBoxContainer/Button2" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question3/CenterContainer/VBoxContainer/Button3" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question4/CenterContainer/VBoxContainer/Button" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question4/CenterContainer/VBoxContainer/Button2" to="." method="on_incorrect"]
+
+[connection signal="pressed" from="Question4/CenterContainer/VBoxContainer/Button3" to="." method="on_correct"]
+
+
