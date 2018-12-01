@@ -3,7 +3,7 @@ extends Node2D
 var speed = 5
 
 func _ready():
-	get_parent().connect("fail", self, "on_fail")
+	get_parent().get_parent().connect("fail", self, "on_fail")
 
 func _physics_process(delta):
 	position.x = position.x - speed

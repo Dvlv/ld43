@@ -28,7 +28,6 @@ func start():
 	_on_SpawnTimer_timeout()
 
 
-
 func on_crash():
 	emit_signal("fail")
 	has_failed = true
@@ -37,7 +36,6 @@ func on_crash():
 
 	for child in $EnemyCars.get_children():
 		child.queue_free()
-
 
 
 func _on_GameTimer_timeout():
@@ -67,13 +65,7 @@ func _on_SpawnTimer_timeout():
 				var new_enemy_car = ENEMY_CAR_SCENE.instance()
 				new_enemy_car.position = child.get_global_transform().get_origin()
 
-#				if time_left < 10:
-#					new_enemy_car.speed = 5
-#				elif time_left < 20:
-#					new_enemy_car.speed = 4
-
 				$EnemyCars.add_child(new_enemy_car)
-
 
 
 func _on_Button_pressed():

@@ -12,7 +12,7 @@ func crash():
 
 
 func _ready():
-	get_parent().connect("fail", self, "on_fail")
+	get_parent().get_parent().connect("fail", self, "on_fail")
 
 
 func on_fail():
