@@ -5,6 +5,12 @@ onready var DIALOGUE = $CanvasLayer/DialogueBox
 func _ready():
 	my_global_script.current_day = "fri"
 
+	if not my_global_script.friday_minigame_done:
+		intro()
+	else:
+		post_minigame()
+
+func intro():
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I awoke early on Friday to the sound of my wife being sick."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [wife_worked()]},
@@ -19,7 +25,11 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["In fact, I had to leave an hour early."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Obviously the boss was okay when I told him. How could he not be?"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He was such a fantastic boss."]},
-		# minigame - cleanup
+		{"target": self, "method": "go_to_minigame_scene", "args": []},
+	])
+
+func post_minigame():
+	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["At 11am the boss dragged himself in. He looked a wreck."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Good night out?\" I asked."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He summoned me into his office."]},
@@ -47,6 +57,10 @@ func money_check():
 	else:
 		return "I worry if I will make it. Could I have worked harder? Should I have done more overtime?"
 
+
+func go_to_minigame_scene():
+	var mg_scene = load("res://scenes/rubbish/rubbish.tscn")
+	get_tree().change_scene_to(mg_scene)
 
 func go_to_end_scene():
 	var END_SCENE = null
