@@ -12,28 +12,38 @@ func _ready():
 
 func intro():
 	my_global_script.animated_scene([
+	{"target": self, "method": "change_bg_to", "args": ["me-bed"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I awoke early on Friday to the sound of my wife being sick."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [wife_worked()]},
+		{"target": self, "method": "change_bg_to", "args": ["wife-babys-room"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["She slept in the baby's room. Nice to know the kid isn't being neglected in these difficult times."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [guilt()]},
+		{"target": self, "method": "change_bg_to", "args": ["me-bed"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["If the big deal had gone down and the boss paid out, I was gonna treat them both at the weekend."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I'm working hard for both of them. No, all three of them now."]},
+		{"target": self, "method": "change_bg_to", "args": ["paycheque"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["My paycheque comes in today. Atop the usual $350 I'll have all of the overtime."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [money_check()]},
+		{"target": self, "method": "change_bg_to", "args": ["me-wife"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["The wife needed a hospital checkup that afternoon."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["There was no chance for overtime."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["In fact, I had to leave an hour early."]},
+		{"target": self, "method": "change_bg_to", "args": ["me-boss-1"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Obviously the boss was okay when I told him. How could he not be?"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He was such a fantastic boss."]},
+		{"target": self, "method": "change_bg_to", "args": ["office-me"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["The office had become a mess since I'd started working late. I took the opportunity to clean up before he came in."]},
 		{"target": self, "method": "go_to_minigame_scene", "args": []},
 	])
 
 func post_minigame():
 	my_global_script.animated_scene([
+	{"target": self, "method": "change_bg_to", "args": ["boss-drunk"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["At 11am the boss dragged himself in. He looked a wreck."]},
+		{"target": self, "method": "change_bg_to", "args": ["office-me"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Good night out?\" I asked."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He summoned me into his office."]},
+		{"target": self, "method": "change_bg_to", "args": ["boss-me-1"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Moment of truth."]},
 		{"target": self, "method": "go_to_end_scene", "args": []},
 	])
@@ -41,7 +51,7 @@ func post_minigame():
 
 func wife_worked():
 	if my_global_script.wife_recent_ot > 0:
-		return "Poor thing just found out she's pregnant and is already being worked like crazy."
+		return "Poor thing just found out she's pregnant and is already working like crazy."
 	else:
 		return "It's probably a good thing she isn't staying late with me."
 

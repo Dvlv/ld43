@@ -15,20 +15,23 @@ func _ready():
 	print(my_global_script.thursday_minigame_done)
 
 
-
 func scene_intro():
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [saw_wife()]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [wife_overtime()]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I promised myself that when this debt is paid I'd spend a whole week with the two of them."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Just needed to get out of that mess. "]},
+		{"target": self, "method": "change_bg_to", "args": ["office"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["When I got to work on Thursday I noticed a few people were missing."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [why_people_missing()]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [why_people_missing_two()]},
+		{"target": self, "method": "change_bg_to", "args": ["me-boss-1"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I caught up with the boss that afternoon. He looked nervous."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Gotta give your bid today son, but uh, listen\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Because of, y'know, last time... they just want me there.\""]},
+		{"target": self, "method": "change_bg_to", "args": ["me-boss-2"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"I know it's your work and all but, you know what these corporate people are like\""]},
+		{"target": self, "method": "change_bg_to", "args": ["me-boss-1"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Don't sweat it\" I replied \"You're totally the only person I'd trust to deliver this bid exactly how it needs to go.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Go get 'em boss!\" I gave him a reassuring pat on the back, then returned to my work."]},
 		{"target": self, "method": "go_to_minigame_scene", "args": []},
@@ -37,23 +40,30 @@ func scene_intro():
 func scene_after_minigame():
 	# minigame - memory
 	my_global_script.animated_scene([
+	{"target": self, "method": "change_bg_to", "args": ["boss-clients"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["That evening, the boss left with the clients for what I assume was a boozy night on the town, so I checked in with security myself."]},
+		{"target": self, "method": "change_bg_to", "args": ["me-security"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["They weren't supposed to deal with non-management directly, but since we'd been doing it all week he let this occasion slide."]},
+		{"target": self, "method": "change_bg_to", "args": ["office-me-security"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He sure kept a close eye on me that night, though."]},
 		{"target": self, "method": "go_to_amount_scene", "args": []},
 	])
 
 func wife_overtime():
 	if my_global_script.wife_recent_ot > 0:
+		change_bg_to("wife-babys-room")
 		return "That night she slept in the baby's room. I think she felt guilty about the overtime."
 	else:
+		change_bg_to("me-wife")
 		return "I don't blame her for not doing any overtime. It's not a fun job at all. Plus, I can tell she's stressed."
 
 
 func saw_wife():
 	if my_global_script.recent_overtime > 3:
+		change_bg_to("wife-baby-asleep")
 		return "I didn't get to speak to my wife when I got home. I had seen her all day at work, anyway."
 	else:
+		change_bg_to("me-wife")
 		return "Me and the wife chatted a little about our day and spent some time with the little one before bed. "
 
 

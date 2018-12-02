@@ -13,12 +13,15 @@ func _ready():
 
 func intro():
 	my_global_script.animated_scene([
+		{"target": self, "method": "change_bg_to", "args": ["office-me"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I decided to carry on for " + str(my_global_script.overtime) + " hours."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Made us an extra $" + str(my_global_script.money) + "."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [whether_saw_wife()]},
+		{"target": self, "method": "change_bg_to", "args": ["office-full"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Tuesday came about next, of course."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Mostly a normal day at work."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [how_tired()]},
+		{"target": self, "method": "change_bg_to", "args": ["me-boss-office"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Boss came over to me at lunch looking all serious."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Said \"Hey, you know those guys we were talking to last week? That life-changing contract? Well, it's back on!\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"That's great!\" I said"]},
@@ -28,6 +31,7 @@ func intro():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"If we lose 'em... uh, well, it ain't lookin' all sunshine, kid. Feel me?\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I nodded"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Pitch is tomorrow. Knock em out, champ!\""]},
+		{"target": self, "method": "change_bg_to", "args": ["office-full"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Sounded like the boss really needed me. And I figured everyone at home was fine with me staying late again."]},
 	])
 
@@ -36,12 +40,14 @@ func post_minigame():
 	my_global_script.animated_scene([
 		# mini game - find the right page
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [if_made_mistake()]},
+		{"target": self, "method": "change_bg_to", "args": ["me-boss-office"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["That evening, I said goodbye to my last coworker, before catching up with the boss to fill in my overtime."]},
 		{"target": self, "method": "go_to_amount_scene", "args": []},
 	])
 
 
 func if_made_mistake():
+	change_bg_to("office-full")
 	if my_global_script.made_erros_in_bid:
 		return "Looking back, I don't think I put as much effort into the research as I could've."
 	else:
@@ -50,12 +56,15 @@ func if_made_mistake():
 
 func whether_saw_wife():
 	if my_global_script.overtime > 3:
+		change_bg_to("wife-baby-asleep")
 		return "I didn't see much of my wife. She was asleep when I got home. Baby was asleep too."
 	else:
+		change_bg_to("me-wife")
 		return "Wife was still up when I got home. We didn't talk much, but I was still glad to see her after a long day."
 
 
 func how_tired():
+	change_bg_to("office-full")
 	if my_global_script.overtime > 3:
 		return "I was pretty exhausted from last night, but I pushed through the day."
 	else:
