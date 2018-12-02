@@ -45,16 +45,17 @@ func _ready():
 
 	hr_box = BOX_SCENE.instance()
 	hr_box.type = "hr"
-	hr_box.scale = Vector2(0.5, 0.5)
+	hr_box.scale = Vector2(1, 1)
 	$Boxes/TopBox.add_child(hr_box)
 
 	sales_box = BOX_SCENE.instance()
 	sales_box.type = "sales"
+	sales_box.scale = Vector2(1.25, 1.25)
 	$Boxes/MiddleBox.add_child(sales_box)
 
 	finance_box = BOX_SCENE.instance()
 	finance_box.type = "finance"
-	finance_box.scale = Vector2(0.5, 0.5)
+	finance_box.scale = Vector2(1, 1)
 	$Boxes/BottomBox.add_child(finance_box)
 
 	for box in [hr_box, sales_box, finance_box]:
@@ -84,9 +85,9 @@ func rotate_boxes_down():
 	$Boxes/BottomBox.add_child(middle_box)
 	$Boxes/TopBox.add_child(bottom_box)
 
-	top_box.scale = Vector2(1,1)
-	bottom_box.scale = Vector2(0.5, 0.5)
-	middle_box.scale = Vector2(0.5, 0.5)
+	top_box.scale = Vector2(1.25,1.25)
+	bottom_box.scale = Vector2(1, 1)
+	middle_box.scale = Vector2(1, 1)
 
 
 func rotate_boxes_up():
@@ -102,9 +103,9 @@ func rotate_boxes_up():
 	$Boxes/BottomBox.add_child(top_box)
 	$Boxes/TopBox.add_child(middle_box)
 
-	bottom_box.scale = Vector2(1,1)
-	top_box.scale = Vector2(0.5, 0.5)
-	middle_box.scale = Vector2(0.5, 0.5)
+	bottom_box.scale = Vector2(1.25,1.25)
+	top_box.scale = Vector2(1, 1)
+	middle_box.scale = Vector2(1, 1)
 
 
 func _on_SpawnTimer_timeout():

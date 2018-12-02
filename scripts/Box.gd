@@ -6,11 +6,11 @@ export(String) var type = ""
 
 func _ready():
 	if type == "finance":
-		$Sprite.texture = load("res://assets/papersort/financePaper.png")
+		$Sprite.texture = load("res://assets/papersort/box-finance.png")
 	elif type == "hr":
-		$Sprite.texture = load("res://assets/papersort/hrPaper.png")
+		$Sprite.texture = load("res://assets/papersort/box-hr.png")
 	else:
-		$Sprite.texture = load("res://assets/papersort/salesPaper.png")
+		$Sprite.texture = load("res://assets/papersort/box-sales.png")
 
 
 func _on_Area2D_area_entered(area):
