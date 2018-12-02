@@ -25,6 +25,7 @@ func intro():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["In fact, I had to leave an hour early."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Obviously the boss was okay when I told him. How could he not be?"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He was such a fantastic boss."]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["The office had become a mess since I'd started working late. I took the opportunity to clean up before he came in."]},
 		{"target": self, "method": "go_to_minigame_scene", "args": []},
 	])
 
@@ -40,7 +41,7 @@ func post_minigame():
 
 func wife_worked():
 	if my_global_script.wife_recent_ot > 0:
-		return "Poor thing just found out she's pregnant and is already being worked like a dog."
+		return "Poor thing just found out she's pregnant and is already being worked like crazy."
 	else:
 		return "It's probably a good thing she isn't staying late with me."
 

@@ -14,7 +14,7 @@ func _ready():
 
 	print(my_global_script.thursday_minigame_done)
 
-# minigame - memory
+
 
 func scene_intro():
 	my_global_script.animated_scene([
@@ -35,6 +35,7 @@ func scene_intro():
 	])
 
 func scene_after_minigame():
+	# minigame - memory
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["That evening, the boss left with the clients for what I assume was a boozy night on the town, so I checked in with security myself."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["They weren't supposed to deal with non-management directly, but since we'd been doing it all week he let this occasion slide."]},
