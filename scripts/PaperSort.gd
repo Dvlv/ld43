@@ -85,6 +85,8 @@ func rotate_boxes_down():
 	$Boxes/BottomBox.add_child(middle_box)
 	$Boxes/TopBox.add_child(bottom_box)
 
+	$SwapNoise.play()
+
 	top_box.scale = Vector2(1.25,1.25)
 	bottom_box.scale = Vector2(1, 1)
 	middle_box.scale = Vector2(1, 1)
@@ -102,6 +104,7 @@ func rotate_boxes_up():
 	$Boxes/MiddleBox.add_child(bottom_box)
 	$Boxes/BottomBox.add_child(top_box)
 	$Boxes/TopBox.add_child(middle_box)
+	$SwapNoise.play()
 
 	bottom_box.scale = Vector2(1.25,1.25)
 	top_box.scale = Vector2(1, 1)
@@ -139,3 +142,7 @@ func _on_GameTimer_timeout():
 func on_caught_paper(box_type, paper_type):
 	if box_type != paper_type:
 		on_fail()
+
+
+func play_noise():
+	$FileNoise.play()

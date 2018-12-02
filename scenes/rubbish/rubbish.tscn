@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/rubbish.gd" type="Script" id=1]
 [ext_resource path="res://scripts/RubbishBag.gd" type="Script" id=2]
 [ext_resource path="res://assets/rubbish/bag.png" type="Texture" id=3]
+[ext_resource path="res://assets/sounds/bag.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -14,7 +15,7 @@ extents = Vector2( 26.7524, 50.547 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 321.736 )
 
-[node name="Rubbish" type="Node2D" index="0"]
+[node name="Rubbish" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -98,6 +99,15 @@ audio_bus_name = "Master"
 
 position = Vector2( 43.9802, 6.35848 )
 shape = SubResource( 1 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="Bag" index="2"]
+
+stream = ExtResource( 4 )
+volume_db = -9.01
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [node name="FailArea" type="Area2D" parent="." index="2"]
 

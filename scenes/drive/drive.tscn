@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/DriveLogic.gd" type="Script" id=1]
 [ext_resource path="res://assets/drive/road.png" type="Texture" id=2]
 [ext_resource path="res://assets/drive/road2.png" type="Texture" id=3]
 [ext_resource path="res://scripts/MyCar.gd" type="Script" id=4]
 [ext_resource path="res://assets/drive/me-car.png" type="Texture" id=5]
+[ext_resource path="res://assets/sounds/crash.ogg" type="AudioStream" id=6]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
@@ -15,12 +16,12 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 92.7804, 38.1102 )
 
-[node name="Driving" type="Node2D" index="0"]
+[node name="Driving" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -28,21 +29,21 @@ script = ExtResource( 1 )
 
 position = Vector2( 520, -20 )
 scale = Vector2( 2.32143, 1.86344 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "default"
 playing = true
 
 [node name="Road2" type="AnimatedSprite" parent="Road" index="0"]
 
 position = Vector2( -6.46156, 83.4657 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "default"
 playing = true
 
 [node name="Road3" type="AnimatedSprite" parent="Road" index="1"]
 
 position = Vector2( -2.15387, 163.962 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "default"
 playing = true
 
@@ -50,7 +51,7 @@ playing = true
 
 position = Vector2( -2.15387, 249.453 )
 scale = Vector2( 1, 1.16986 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "default"
 frame = 1
 playing = true
@@ -59,7 +60,7 @@ playing = true
 
 position = Vector2( 4.30769, 338.084 )
 scale = Vector2( 1, 1.16986 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "default"
 playing = true
 
@@ -117,7 +118,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Car/Area2D" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="GameTimer" type="Timer" parent="." index="3"]
 
@@ -253,6 +254,15 @@ flat = false
 align = 1
 
 [node name="EnemyCars" type="Node2D" parent="." index="7"]
+
+[node name="Crash" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 6 )
+volume_db = -18.92
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="area_entered" from="Car/Area2D" to="Car" method="_on_Area2D_area_entered"]
 

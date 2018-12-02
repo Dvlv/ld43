@@ -35,14 +35,18 @@ func turn_pages_right():
 	if current_page > 0:
 		current_page -= 1
 		$TextureButton.texture_normal = PAGES[current_page]
+		$Turn.play()
 	else:
-		pass # play noise
+		$Fail.play()
 
 
 func turn_pages_left():
 	if current_page < (len(PAGES) - 1):
 		current_page += 1
 		$TextureButton.texture_normal = PAGES[current_page]
+		$Turn.play()
+	else:
+		$Fail.play()
 
 
 

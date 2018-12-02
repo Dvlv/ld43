@@ -37,6 +37,7 @@ func on_page_selected(page_type):
 func flip_notebook():
 	# play sound
 	$Notebook/Sprite.texture = NOTEBOOK_SHEETS[current_needed_type]
+	$PadFlip.play()
 
 
 func finish():

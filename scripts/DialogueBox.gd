@@ -30,11 +30,13 @@ func show_dialogue(text):
     self.visible = true
     listening = false
     NEXT.visible = false
+    $Sound.play()
 
     set_text(text)
     display_text()
 
 func dialogue_finished_callback():
+    $Sound.stop()
     TIMER.stop()
     NEXT.visible = true
     listening = true

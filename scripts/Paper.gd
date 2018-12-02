@@ -20,4 +20,5 @@ func _physics_process(delta):
 
 func file():
 	# play noise
+	get_parent().get_parent().play_noise()
 	queue_free()

@@ -25,7 +25,7 @@ func intro():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Another one?\" I asked"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Yes. We're having another baby\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["We both looked at each other for a minute, not sure whether to jump for joy or cry for help. "]},
-		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Can we afford to give a second child the life it truly deserves?"]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Can we afford to give a second child a good home?"]},
 		{"target": self, "method": "change_bg_to", "args": ["alarm"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["*beep-beep*, *beep-beep*, *beep-beep*"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Oh, my alarm clock. "]},

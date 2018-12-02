@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/CompanyBook.gd" type="Script" id=1]
 [ext_resource path="res://assets/buildbid/book-cover.png" type="Texture" id=2]
 [ext_resource path="res://assets/buildbid/book-policy.png" type="Texture" id=3]
+[ext_resource path="res://assets/sounds/page-turn.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/Text.ogg" type="AudioStream" id=5]
 
 [node name="CompanyBook" type="Node2D"]
 
@@ -36,6 +38,24 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 3 )
 _sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Turn" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Fail" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 

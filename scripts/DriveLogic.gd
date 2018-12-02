@@ -31,6 +31,7 @@ func start():
 
 
 func on_crash():
+	$Crash.play()
 	emit_signal("fail")
 	has_failed = true
 	$GameTimer.stop()

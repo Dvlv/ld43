@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pad-turn.ogg-c6d611098a931948716cc25ef5525766.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/pad-turn.ogg"
+dest_files=[ "res://.import/pad-turn.ogg-c6d611098a931948716cc25ef5525766.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

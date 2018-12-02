@@ -8,5 +8,6 @@ func _physics_process(delta):
 
 func _on_Area2D_area_entered(area):
 	if area.name == "RubbishArea":
+		$Sound.play()
 		area.get_parent().consume()
 
