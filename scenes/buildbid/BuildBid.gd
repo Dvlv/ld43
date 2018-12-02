@@ -1,12 +1,14 @@
 extends Node2D
 
 var NOTEBOOK_SHEETS = [
-	preload("res://assets/buildbid/financePaper.png"),
-	preload("res://assets/buildbid/hrPaper.png"),
-	preload("res://assets/buildbid/salesPaper.png"),
+	preload("res://assets/buildbid/pad-finance.png"),
+	preload("res://assets/buildbid/pad-sales.png"),
+	preload("res://assets/buildbid/pad-policy.png"),
+	preload("res://assets/buildbid/pad-profit.png"),
+	preload("res://assets/buildbid/pad-terms.png"),
 ]
 
-var NEEDED_TYPES = ["finance", "hr", "sales"]
+var NEEDED_TYPES = ["finance", "sales", "policy", "profit", "terms"]
 
 var current_needed_type = 0
 var built_report = {}
@@ -20,6 +22,7 @@ func _ready():
 func start():
 	$CompanyBook.visible = true
 	$Notebook.visible = true
+	$Instructions.visible = false
 
 
 func on_page_selected(page_type):
@@ -45,3 +48,7 @@ func finish():
 	var tuesday = load("res://scenes/tuesday.tscn")
 	get_tree().change_scene_to(tuesday)
 
+
+
+func _on_Button_pressed():
+	start()

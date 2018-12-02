@@ -3,15 +3,19 @@ extends Node2D
 signal page_selected
 
 var PAGES = [
-	preload("res://assets/buildbid/financePaper.png"),
-	preload("res://assets/buildbid/hrPaper.png"),
-	preload("res://assets/buildbid/salesPaper.png"),
+	preload("res://assets/buildbid/book-policy.png"),
+	preload("res://assets/buildbid/book-finance.png"),
+	preload("res://assets/buildbid/book-sales.png"),
+	preload("res://assets/buildbid/book-terms.png"),
+	preload("res://assets/buildbid/book-profit.png"),
 ]
 
 var PAGE_TYPES = [
+	"policy",
 	"finance",
-	"hr",
 	"sales",
+	"terms",
+	"profit",
 ]
 
 var current_page = 0
