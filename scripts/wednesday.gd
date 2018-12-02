@@ -34,6 +34,7 @@ func intro():
 		{"target": self, "method": "change_bg_to", "args": ["me-car"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["On the way into work, it hit me like a ton of bricks. "]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["My wife can't work while pregnant. The fumes produced by those machines can wreak havoc on the baby."]},
+		{"target": self, "method": "go_to_drive_scene", "args": []},
 	])
 
 
@@ -68,6 +69,7 @@ func post_driving():
 		{"target": self, "method": "change_bg_to", "args": ["office-wife"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["She dropped the little one over with her parents and came in at lunch."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["It was nice seeing her, felt like the most I'd seen her all week. Probably was."]},
+		{"target": self, "method": "go_to_minigame_scene", "args": []},
 	])
 
 
@@ -92,3 +94,12 @@ func saw_wife():
 
 func go_to_amount_scene():
 	get_tree().change_scene_to(NEXT_SCENE)
+
+
+func go_to_minigame_scene():
+	var minigame = load("res://scenes/papersort/PaperSort.tscn")
+	get_tree().change_scene_to(minigame)
+
+func go_to_drive_scene():
+	var minigame = load("res://scenes/drive/drive.tscn")
+	get_tree().change_scene_to(minigame)

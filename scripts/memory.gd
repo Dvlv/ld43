@@ -1,6 +1,4 @@
-extends Node2D
-
-signal finished_displaying
+extends "res://scripts/ChangesBg.gd"
 
 onready var DIALOGUE = $CanvasLayer/DialogueBox
 
@@ -16,6 +14,7 @@ func _ready():
 	$Yesno.visible = false
 
 	my_global_script.animated_scene([
+	{"target": self, "method": "change_bg_to", "args": ["office-wife"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Hi Honey\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"I just spoke to Mike about his business trip.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"He said he needs you to explain the situation to his boss.\""]},
@@ -45,6 +44,7 @@ func on_yes():
 
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Great! I'll go get his boss.\""]},
+		{"target": self, "method": "change_bg_to", "args": ["me-mike-boss"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Hey there. Your wife said you could tell me all about Mike's trip.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Where's he gone?\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Why is he there?\""]},
@@ -85,6 +85,7 @@ func display_next_question():
 func results():
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Hmm. Okay thanks. That's helpful information.\""]},
+		{"target": self, "method": "change_bg_to", "args": ["office-wife"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Hey there honey. Did you tell Mike's boss everything I told you?\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [was_successful()]},
 		{"target": self, "method": "resume_thursday", "args": []},

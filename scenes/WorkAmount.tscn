@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/bgs/me-uniform.png" type="Texture" id=2]
 [ext_resource path="res://assets/bgs/wife-uniform.png" type="Texture" id=3]
 
-[node name="WorkAmount" type="Control"]
+[node name="WorkAmount" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -57,9 +57,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_top = 60.0
+margin_top = 51.0
 margin_right = 975.0
-margin_bottom = 74.0
+margin_bottom = 82.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -68,7 +68,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Drag the slider to adjust your overtime. The longer you work, the more money you earn!"
+text = "Drag the slider to adjust your overtime. The longer you work, the more money you earn (but the less you see your family)
+"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0

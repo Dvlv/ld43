@@ -51,22 +51,22 @@ func post_minigame():
 
 func wife_worked():
 	if my_global_script.wife_recent_ot > 0:
-		return "Poor thing just found out she's pregnant and is already working like crazy."
+		return "Poor thing just found out she's pregnant and was already working like crazy."
 	else:
-		return "It's probably a good thing she isn't staying late with me."
+		return "It was probably a good thing she wasn't staying late with me."
 
 func guilt():
 	if my_global_script.recent_overtime > 3:
-		return "Am I a bad person for not feeling as guilty as her?"
+		return "Was I a bad person for not feeling as guilty as her?"
 	else:
-		return "The night before I spent some time with both of them - making sure not to let work get in the way of family."
+		return "The night before I'd spent some time with both of them - making sure not to let work get in the way of family."
 
 
 func money_check():
 	if my_global_script.money > 1600:
-		return "I'm feeling pretty good about it. I should have done enough to get by."
+		return "I was feeling pretty good about it. I should've had enough to get by."
 	else:
-		return "I worry if I will make it. Could I have worked harder? Should I have done more overtime?"
+		return "I worried if I would make it. Could I have worked harder? Should I have done more overtime?"
 
 
 func go_to_minigame_scene():

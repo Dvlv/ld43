@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pg3.png-c1b3bdf39d4f62142df25c69d8f26300.stex"
+path="res://.import/me-mike-boss.png-55e6298d97cf367a7c6345c3d392da8b.stex"
 
 [deps]
 
-source_file="res://assets/scans/pg3.png"
-dest_files=[ "res://.import/pg3.png-c1b3bdf39d4f62142df25c69d8f26300.stex" ]
+source_file="res://assets/bgs/me-mike-boss.png"
+dest_files=[ "res://.import/me-mike-boss.png-55e6298d97cf367a7c6345c3d392da8b.stex" ]
 
 [params]
 

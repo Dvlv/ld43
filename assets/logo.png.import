@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pg5.png-75cf626fb086bb7f8dc811a596796fb3.stex"
+path="res://.import/logo.png-e2220799298e3631eb0e245316e0501a.stex"
 
 [deps]
 
-source_file="res://assets/scans/pg5.png"
-dest_files=[ "res://.import/pg5.png-75cf626fb086bb7f8dc811a596796fb3.stex" ]
+source_file="res://assets/logo.png"
+dest_files=[ "res://.import/logo.png-e2220799298e3631eb0e245316e0501a.stex" ]
 
 [params]
 

@@ -33,6 +33,7 @@ func intro():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Pitch is tomorrow. Knock em out, champ!\""]},
 		{"target": self, "method": "change_bg_to", "args": ["office-full"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Sounded like the boss really needed me. And I figured everyone at home was fine with me staying late again."]},
+		{"target": self, "method": "go_to_minigame_scene", "args": []},
 	])
 
 
@@ -72,3 +73,8 @@ func how_tired():
 
 func go_to_amount_scene():
 	get_tree().change_scene_to(NEXT_SCENE)
+
+
+func go_to_minigame_scene():
+	var minigame = load("res://scenes/buildbid/BuildBid.tscn")
+	get_tree().change_scene_to(minigame)

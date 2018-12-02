@@ -59,7 +59,7 @@ func on_submit():
 		next_scene = load("res://scenes/wednesday.tscn")
 	elif my_global_script.current_day == "wed":
 		next_scene = load("res://scenes/thursday.tscn")
-	elif my_global_script.current_day == "thursday":
+	elif my_global_script.current_day == "thurs":
 		next_scene = load("res://scenes/friday.tscn")
 
 	get_tree().change_scene_to(next_scene)

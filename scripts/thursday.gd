@@ -12,8 +12,6 @@ func _ready():
 	else:
 		scene_after_minigame()
 
-	print(my_global_script.thursday_minigame_done)
-
 
 func scene_intro():
 	my_global_script.animated_scene([
