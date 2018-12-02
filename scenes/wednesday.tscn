@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scripts/wednesday.gd" type="Script" id=1]
 [ext_resource path="res://scenes/DialogueBox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/papersort/hrPaper.png" type="Texture" id=3]
 
-[node name="Wednesday" type="Node2D"]
+[node name="Wednesday" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -20,7 +19,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Background" type="Sprite" parent="." index="1"]
 
-position = Vector2( 264.82, 160.665 )
-texture = ExtResource( 3 )
+position = Vector2( 512, 175 )
+_sections_unfolded = [ "Transform" ]
 
 

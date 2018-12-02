@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/DialogueBox.gd" type="Script" id=1]
-[ext_resource path="res://scripts/Text.gd" type="Script" id=2]
+[ext_resource path="res://assets/bgs/border.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Text.gd" type="Script" id=3]
 
 [node name="DialogueBox" type="Control"]
 
@@ -96,6 +97,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+texture = ExtResource( 2 )
 
 [node name="Next" type="Label" parent="VBoxContainer/MarginContainer3/NinePatchRect" index="0"]
 
@@ -103,20 +105,23 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 912.0
-margin_top = 152.0
-margin_right = 973.0
-margin_bottom = 170.0
+margin_left = 876.0
+margin_top = 141.0
+margin_right = 937.0
+margin_bottom = 159.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "[Space]"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Text" type="RichTextLabel" parent="VBoxContainer/MarginContainer3/NinePatchRect" index="1"]
 
@@ -124,16 +129,18 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 39.0
-margin_top = 49.0
-margin_right = 1007.0
-margin_bottom = 196.0
+margin_left = 146.0
+margin_top = 39.0
+margin_right = 862.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
 visible_characters = -1
@@ -145,7 +152,8 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Timer" type="Timer" parent="." index="1"]
 

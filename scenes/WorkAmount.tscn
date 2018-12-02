@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/WorkAmount.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/bgs/me-uniform.png" type="Texture" id=2]
+[ext_resource path="res://assets/bgs/wife-uniform.png" type="Texture" id=3]
 
 [node name="WorkAmount" type="Control"]
 
@@ -40,7 +41,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 975.0
-margin_bottom = 164.0
+margin_bottom = 134.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -56,20 +57,23 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
-margin_top = 75.0
+margin_top = 60.0
 margin_right = 975.0
-margin_bottom = 89.0
+margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Drag the slider to adjust your overtime. The longer you work, the more money you earn!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants" ]
 
 [node name="Player" type="HBoxContainer" parent="VBoxContainer" index="1"]
 
@@ -77,9 +81,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 168.0
+margin_top = 138.0
 margin_right = 975.0
-margin_bottom = 332.0
+margin_bottom = 317.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -96,7 +100,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 483.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -112,10 +116,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 209.0
-margin_top = 50.0
-margin_right = 273.0
-margin_bottom = 114.0
+margin_left = 187.0
+margin_right = 295.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -124,6 +127,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Player" index="1"]
 
@@ -133,7 +137,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 487.0
 margin_right = 975.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -150,7 +154,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
 margin_right = 488.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -166,7 +170,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 480.0
-margin_bottom = 80.0
+margin_bottom = 87.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -193,20 +197,22 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 84.0
+margin_top = 91.0
 margin_right = 480.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "1                                                                                                                    6"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_colors" ]
 
 [node name="Wife" type="HBoxContainer" parent="VBoxContainer" index="2"]
 
@@ -214,7 +220,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 336.0
+margin_top = 321.0
 margin_right = 975.0
 margin_bottom = 500.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -233,7 +239,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 479.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -243,6 +249,24 @@ size_flags_vertical = 3
 use_top_left = false
 _sections_unfolded = [ "Size Flags" ]
 
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Wife/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 185.0
+margin_right = 293.0
+margin_bottom = 179.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/Wife" index="1"]
 
 anchor_left = 0.0
@@ -251,7 +275,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 483.0
 margin_right = 975.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -268,7 +292,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 8.0
 margin_right = 492.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -284,7 +308,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 484.0
-margin_bottom = 80.0
+margin_bottom = 87.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -311,20 +335,22 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 84.0
+margin_top = 91.0
 margin_right = 484.0
-margin_bottom = 164.0
+margin_bottom = 179.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0                                                                                                                     3"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
+_sections_unfolded = [ "Size Flags", "custom_colors" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" index="3"]
 
@@ -376,11 +402,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Overtime: 1 hour"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Money" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="1"]
 
@@ -397,11 +426,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Money: $100"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="blank" type="Label" parent="VBoxContainer/CenterContainer/VBoxContainer" index="2"]
 

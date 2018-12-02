@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://scripts/ChangesBg.gd"
 
 onready var DIALOGUE = $CanvasLayer/DialogueBox
 onready var NEXT_SCENE = preload("res://scenes/Thanks.tscn")

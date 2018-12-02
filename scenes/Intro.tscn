@@ -21,7 +21,7 @@ visible = false
 
 [node name="Background" type="Sprite" parent="." index="1"]
 
-position = Vector2( 512, 300 )
+position = Vector2( 512, 175 )
 _sections_unfolded = [ "Transform" ]
 
 
