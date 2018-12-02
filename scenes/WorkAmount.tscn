@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/bgs/me-uniform.png" type="Texture" id=3]
 [ext_resource path="res://assets/bgs/wife-uniform.png" type="Texture" id=4]
 
-[node name="WorkAmount" type="Control" index="0"]
+[node name="WorkAmount" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
