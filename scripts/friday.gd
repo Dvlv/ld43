@@ -29,7 +29,7 @@ func intro():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["There was no chance for overtime."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["In fact, I had to leave an hour early."]},
 		{"target": self, "method": "change_bg_to", "args": ["me-boss-1"]},
-		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Obviously the boss was okay when I told him. How could he not be?"]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Obviously, the boss said yes when I asked him yesterday."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["He was such a fantastic boss."]},
 		{"target": self, "method": "change_bg_to", "args": ["office-me"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["The office had become a mess since I'd started working late. I took the opportunity to clean up before he came in."]},

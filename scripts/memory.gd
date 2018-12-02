@@ -15,9 +15,11 @@ func _ready():
 
 	my_global_script.animated_scene([
 	{"target": self, "method": "change_bg_to", "args": ["office-wife"]},
+	{"target": DIALOGUE, "method": "show_dialogue", "args": ["My wife approached me with a business task."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Hi Honey\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"I just spoke to Mike about his business trip.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"He said he needs you to explain the situation to his boss.\""]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Listen carefully\""]},
 		{"target": self, "method": "memory_info", "args": []}
 	])
 
@@ -27,7 +29,7 @@ func memory_info():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"He left on Monday. He travelled by train to London.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"He arrived at 10:15am.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"He's now at the Arch Hotel for 4 nights.\""]},
-		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"The hotel is $15 per night.\""]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"The hotel is $15 per night. That's the only business expense.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"The client he's meeting are called Minty Fresh.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"We could make around $4500 dollars a month if we partner with them.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Did you get all of that?\""]},
@@ -43,7 +45,7 @@ func on_yes():
 	$Yesno.visible = false
 
 	my_global_script.animated_scene([
-		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Great! I'll go get his boss.\""]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Great! I'll go get his boss, then I have to run. Tell him what I told you.\""]},
 		{"target": self, "method": "change_bg_to", "args": ["me-mike-boss"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Hey there. Your wife said you could tell me all about Mike's trip.\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Where's he gone?\""]},

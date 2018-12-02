@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/rubbish.gd" type="Script" id=1]
-[ext_resource path="res://scripts/RubbishBag.gd" type="Script" id=2]
-[ext_resource path="res://assets/rubbish/bag.png" type="Texture" id=3]
-[ext_resource path="res://assets/sounds/bag.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/ubuntu-df.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/RubbishBag.gd" type="Script" id=3]
+[ext_resource path="res://assets/rubbish/bag.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/bag.ogg" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,7 +16,7 @@ extents = Vector2( 26.7524, 50.547 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 321.736 )
 
-[node name="Rubbish" type="Node2D"]
+[node name="Rubbish" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -43,12 +44,13 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Time: 30"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="MissLabel" type="Label" parent="CanvasLayer" index="1"]
 
@@ -56,33 +58,34 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 883.0
-margin_top = 27.0
-margin_right = 945.0
-margin_bottom = 52.0
+margin_left = 878.0
+margin_top = 32.0
+margin_right = 962.0
+margin_bottom = 57.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Missed: 0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Bag" type="Node2D" parent="." index="1"]
 
 position = Vector2( 100, 50 )
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 is_disabled = false
 
 [node name="Sprite" type="Sprite" parent="Bag" index="0"]
 
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="Bag" index="1"]
@@ -102,7 +105,7 @@ shape = SubResource( 1 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="Bag" index="2"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = -9.01
 pitch_scale = 1.0
 autoplay = false
@@ -145,10 +148,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 300.0
-margin_top = 300.0
-margin_right = 340.0
-margin_bottom = 340.0
+margin_left = 193.0
+margin_top = 262.0
+margin_right = 233.0
+margin_bottom = 302.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -156,6 +159,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Instructions" index="0"]
 
@@ -179,21 +185,22 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 486.0
-margin_bottom = 14.0
+margin_right = 686.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Clean up all the rubbish."
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Instructions2" type="Label" parent="Instructions/VBoxContainer" index="1"]
 
@@ -201,30 +208,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 486.0
-margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Move the mouse Up/Down to move the bag. Catch the rubbish to remove it."
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
-
-[node name="Instructions3" type="Label" parent="Instructions/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 36.0
-margin_right = 486.0
+margin_top = 27.0
+margin_right = 686.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -232,13 +217,37 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Move the mouse Up/Down to move the bag. Catch the rubbish to remove it."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Instructions3" type="Label" parent="Instructions/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 54.0
+margin_right = 686.0
+margin_bottom = 77.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Miss 3 pieces and your boss will get mad!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Button" type="Button" parent="Instructions/VBoxContainer" index="3"]
 
@@ -246,9 +255,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 486.0
-margin_bottom = 74.0
+margin_top = 81.0
+margin_right = 686.0
+margin_bottom = 101.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2

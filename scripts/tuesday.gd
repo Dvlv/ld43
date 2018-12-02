@@ -14,8 +14,9 @@ func _ready():
 func intro():
 	my_global_script.animated_scene([
 		{"target": self, "method": "change_bg_to", "args": ["office-me"]},
-		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I decided to carry on for " + str(my_global_script.overtime) + " hours."]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I decided to carry on for " + str(my_global_script.overtime) + " hour" + is_plural() + "."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Made us an extra $" + str(my_global_script.money) + "."]},
+		{"target": self, "method": "change_bg_to", "args": [wife_scene()]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [whether_saw_wife()]},
 		{"target": self, "method": "change_bg_to", "args": ["office-full"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Tuesday came about next, of course."]},
@@ -46,6 +47,17 @@ func post_minigame():
 		{"target": self, "method": "go_to_amount_scene", "args": []},
 	])
 
+func is_plural():
+	if my_global_script.overtime > 1:
+		return "s"
+	return ""
+
+func wife_scene():
+	if my_global_script.overtime > 3:
+		return "wife-baby-asleep"
+	else:
+		return "me-wife"
+
 
 func if_made_mistake():
 	change_bg_to("office-full")
@@ -65,7 +77,6 @@ func whether_saw_wife():
 
 
 func how_tired():
-	change_bg_to("office-full")
 	if my_global_script.overtime > 3:
 		return "I was pretty exhausted from last night, but I pushed through the day."
 	else:

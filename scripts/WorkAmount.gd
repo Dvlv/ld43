@@ -6,7 +6,7 @@ onready var MONEY = $VBoxContainer/CenterContainer/VBoxContainer/Money
 onready var OVERTIME = $VBoxContainer/CenterContainer/VBoxContainer/Overtime
 onready var SUBMIT_BTN = $VBoxContainer/CenterContainer/VBoxContainer/Button
 
-var overtime = 0
+var overtime = 1
 var money = 0
 
 var w_overtime = 0

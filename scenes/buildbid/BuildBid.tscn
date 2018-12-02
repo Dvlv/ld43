@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/buildbid/BuildBid.gd" type="Script" id=1]
 [ext_resource path="res://assets/buildbid/pad-finance.png" type="Texture" id=2]
 [ext_resource path="res://scenes/buildbid/CompanyBook.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/sounds/pad-turn.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/ubuntu-df.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/sounds/pad-turn.ogg" type="AudioStream" id=5]
 
 [node name="BuildBid" type="Node2D"]
 
@@ -30,7 +31,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 306.0
+margin_left = 202.0
 margin_top = 246.0
 margin_right = 346.0
 margin_bottom = 286.0
@@ -66,21 +67,22 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 451.0
-margin_bottom = 14.0
+margin_right = 639.0
+margin_bottom = 23.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "You need to make notes about your client for the upcoming bid"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants" ]
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="Label5" type="Label" parent="Instructions/VBoxContainer" index="1"]
 
@@ -88,31 +90,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 451.0
-margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Find the matching page in the book to fill in the notes on your notepad"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
-
-[node name="Label2" type="Label" parent="Instructions/VBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 36.0
-margin_right = 451.0
+margin_top = 27.0
+margin_right = 639.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -120,13 +99,38 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Find the matching page in the book to fill in the notes on your notepad"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_styles" ]
+
+[node name="Label2" type="Label" parent="Instructions/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 54.0
+margin_right = 639.0
+margin_bottom = 77.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Use the Left/Right arrows to turn the pages of the book"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Label3" type="Label" parent="Instructions/VBoxContainer" index="3"]
 
@@ -134,22 +138,23 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 451.0
-margin_bottom = 68.0
+margin_top = 81.0
+margin_right = 639.0
+margin_bottom = 104.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "When you see the correct page, click it to write your notes"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Label4" type="Label" parent="Instructions/VBoxContainer" index="4"]
 
@@ -157,9 +162,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 72.0
-margin_right = 451.0
-margin_bottom = 86.0
+margin_top = 108.0
+margin_right = 639.0
+margin_bottom = 122.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -177,9 +182,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 90.0
-margin_right = 451.0
-margin_bottom = 110.0
+margin_top = 126.0
+margin_right = 639.0
+margin_bottom = 146.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -197,7 +202,7 @@ align = 1
 
 [node name="PadFlip" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
