@@ -19,6 +19,8 @@ var wednesday_driving_done = false
 var thursday_minigame_done = false
 var friday_minigame_done = false
 
+var made_erros_in_bid = false
+
 
 func tie_together_frames():
     frames.remove(0)
