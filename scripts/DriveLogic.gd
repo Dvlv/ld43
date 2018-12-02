@@ -14,6 +14,7 @@ var time_left = 30
 func _ready():
 	$Car.connect("crash", self, "on_crash")
 	$Car.visible = false
+	$Road.visible = false
 
 
 func start():
@@ -21,6 +22,7 @@ func start():
 	time_left = 30
 	TIMELEFT.text = "Time: 30"
 	$Car.visible = true
+	$Road.visible = true
 	$SpawnTimer.wait_time = 2
 
 	$GameTimer.start()
@@ -31,8 +33,11 @@ func start():
 func on_crash():
 	emit_signal("fail")
 	has_failed = true
+	$GameTimer.stop()
+	$SpawnTimer.stop()
 	$Instructions.visible = true
 	$Car.visible = false
+	$Road.visible = false
 
 	for child in $EnemyCars.get_children():
 		child.queue_free()
@@ -50,6 +55,7 @@ func _on_GameTimer_timeout():
 			$SpawnTimer.wait_time = 1.75
 	else:
 		is_over = true
+		finish()
 
 
 func _on_SpawnTimer_timeout():
@@ -72,3 +78,10 @@ func _on_Button_pressed():
 	$Instructions.visible = false
 	$Car.visible = true
 	start()
+
+
+func finish():
+	my_global_script.wednesday_driving_done = true
+	var wed = load("res://scenes/wednesday.tscn")
+	get_tree().change_scene_to(wed)
+
