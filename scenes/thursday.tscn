@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/thursday.gd" type="Script" id=1]
 [ext_resource path="res://scenes/DialogueBox.tscn" type="PackedScene" id=2]
 
-[node name="Thursday" type="Node2D"]
+[node name="Thursday" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -16,5 +16,7 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="DialogueBox" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
+
+[node name="Background" type="Sprite" parent="." index="1"]
 
 

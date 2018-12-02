@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://scripts/ChangesBg.gd"
 
 onready var DIALOGUE = $CanvasLayer/DialogueBox
 onready var NEXT_SCENE = preload("res://scenes/WorkAmount.tscn")
@@ -18,6 +18,7 @@ func intro():
 	my_global_script.animated_scene([
 		{"target": DIALOGUE, "method": "show_dialogue", "args": [saw_wife()]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Wednesday morning I woke up to my wife making noise from the bathroom."]},
+		{"target": self, "method": "change_bg_to", "args": ["bg1"]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I asked her what was going on."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"It's happening. Again\""]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["\"Another one?\" I asked"]},

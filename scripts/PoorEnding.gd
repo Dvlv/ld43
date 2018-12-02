@@ -26,6 +26,9 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I stood up, looking him in the eye, and walked out."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["My desk was aready being packed up by security. Guy had been waiting to get me since I started working on his shift."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I gave them all business property and walked with them to the front door, turning over my ID card."]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I wondered how much longer it would have taken to get that bid right."]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I chose to spend time with my family instead of working."]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I knew that sacrifices must be made, but did I sacrifice too much?"]},
 		# Present day
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I haven't been home yet. I know my wife has realised. There's no way she hasn't."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I just can't face her. Her and the child. The children. "]},

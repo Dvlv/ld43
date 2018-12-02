@@ -30,9 +30,10 @@ func _ready():
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I knew what he wanted to say. I gave him a nod and walked out."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I'd done this to him. I'd done this to us all."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["My desire to grab money like there's no tomorrow has put 25 people out of work. "]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["As they say, sacrifices must be made."]},
 		# present day
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["But you know what?"]},
-		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Corporate did close the branch. But they took one look at my timecard and decided I was too valuable an employee to lose."]},
+		{"target": DIALOGUE, "method": "show_dialogue", "args": ["Corporate did close that branch. But they took one look at my timecard and decided I was too valuable an employee to lose."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["They spoke to my boss, who couldn't bring himself to say a bad word about me, knowing my situation. He took the fall on that bid."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["So now, I'm a boss. The boss of a different branch. Of course, we had to move. But given the pay increase, and the new child, that was a given."]},
 		{"target": DIALOGUE, "method": "show_dialogue", "args": ["I left my few friends behind. I mean, I'm sure they understood that family came first. "]},
