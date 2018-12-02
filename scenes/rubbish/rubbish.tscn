@@ -14,7 +14,7 @@ extents = Vector2( 26.7524, 50.547 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 321.736 )
 
-[node name="Rubbish" type="Node2D"]
+[node name="Rubbish" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -42,10 +42,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Time: 30"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="MissLabel" type="Label" parent="CanvasLayer" index="1"]
 
@@ -63,10 +65,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Missed: 0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Bag" type="Node2D" parent="." index="1"]
 
@@ -92,7 +96,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bag/Area2D" index="0"]
 
-position = Vector2( 70.9802, 0.358482 )
+position = Vector2( 43.9802, 6.35848 )
 shape = SubResource( 1 )
 
 [node name="FailArea" type="Area2D" parent="." index="2"]
@@ -165,7 +169,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 423.0
+margin_right = 486.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -173,11 +177,13 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Clean up all the rubbish."
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Instructions2" type="Label" parent="Instructions/VBoxContainer" index="1"]
 
@@ -186,7 +192,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 18.0
-margin_right = 423.0
+margin_right = 486.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -194,10 +200,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Move the mouse to move the bag. Catch the rubbish to remove it."
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Move the mouse Up/Down to move the bag. Catch the rubbish to remove it."
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Instructions3" type="Label" parent="Instructions/VBoxContainer" index="2"]
 
@@ -206,7 +214,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 36.0
-margin_right = 423.0
+margin_right = 486.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -214,11 +222,13 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Miss 3 pieces and your boss will get mad!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="Button" type="Button" parent="Instructions/VBoxContainer" index="3"]
 
@@ -227,7 +237,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 54.0
-margin_right = 423.0
+margin_right = 486.0
 margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false

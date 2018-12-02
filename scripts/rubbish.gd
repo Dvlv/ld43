@@ -6,7 +6,7 @@ var fail_count = 0
 var level_time = 30
 var has_failed = false
 
-var RUBBISH_SCENES = ["rub1.tscn", "rub2.tscn"]
+var RUBBISH_SCENES = ["rub1.tscn", "rub2.tscn", "rub3.tscn"]
 
 onready var TIMELEFT = $CanvasLayer/TimeLabel
 onready var MISSLABEL = $CanvasLayer/MissLabel
